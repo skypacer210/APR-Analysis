@@ -22,8 +22,7 @@ APR基于POSIX实现了一个thread safe的Blocking Queue，为什么说是threa
    
 队列的同步基于一个互斥锁和两个条件变量（一个非空条件，一个非满条件）。
 
-{% highlight c %}
-
+```
 struct apr_queue_t {
     void              **data;
     unsigned int        nelts; 			/**< # elements */
@@ -38,7 +37,7 @@ struct apr_queue_t {
     int                 terminated;
 };
 
-{% endhighlight %}
+```
 
 
 ### 2.2. 入队操作 ###
